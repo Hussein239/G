@@ -1,0 +1,105 @@
+local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
+local Window = OrionLib:MakeWindow({Name = "🎮سكربتات روبلوكس المتنوعة🎮", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "القائمة الرئيسية",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+-- إضافة "ملاحظة" موحدة مع إيموجي
+Tab:AddLabel("🔄 كل فترة يتم تحديث السكربت وإضافة أشياء جديدة وسكربتات لمابات مختلفة.")
+Tab:AddLabel("💡 لتقديم فكرة أو اقتراح سكربت لماب معين، تواصل مع المالك عبر تيليجرام: ZORO_I@")
+
+Tab:AddLabel("✅ الإصدار الحالي هو 001")
+
+-- إضافة زر "سكربت القديم" في القائمة الرئيسية
+Tab:AddButton({
+	Name = "🎮سكربت القديم🎮",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Hussein239/BH_Y/main/obf_4PC9Uli8LE5H7m2lll5tg2OGDt1282nQvFIOl7B3WYJ5UJ2ksZoF5aQ9XY1P02jM.lua.txt"))()
+	end
+})
+
+Tab:AddLabel("هذا هو السكربت القديم كنت اشتغل عليه قبل هذا سكربت فاذا تريدون تجاوبونا هذا هو جاهز❤️👆")
+
+-- إضافة تبويب جديد باسم "بلوكس فروت"
+local BlocksFruitsTab = Window:MakeTab({
+	Name = "بلوكس فروت",
+	Icon = "rbxassetid://4483345998", -- استبدل بمعرف الأيقونة الذي تريده
+	PremiumOnly = false
+})
+
+-- إضافة عنوان في التبويب "بلوكس فروت"
+BlocksFruitsTab:AddLabel("📚 للمزيد من سكربتات بلوكس فروت، اضغط على الزر الأول 👇")
+
+-- إضافة زر "المزيد من سكربتات بلوكس فروت 🍎" أعلى قائمة الأزرار
+BlocksFruitsTab:AddButton({
+	Name = "المزيد من سكربتات بلوكس فروت 🍎",
+	Callback = function()
+		-- إضافة إشعار في الأسفل
+		local Notification = Instance.new("ScreenGui")
+		local Frame = Instance.new("Frame")
+		local TextLabel = Instance.new("TextLabel")
+		
+		Notification.Name = "Notification"
+		Notification.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+		Frame.Parent = Notification
+		Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0) -- لون الخلفية الأسود
+		Frame.BackgroundTransparency = 0.5
+		Frame.Size = UDim2.new(1, 0, 0, 50)
+		Frame.Position = UDim2.new(0, 0, 1, -60) -- الأسفل من الشاشة
+
+		TextLabel.Parent = Frame
+		TextLabel.BackgroundTransparency = 1
+		TextLabel.Size = UDim2.new(1, 0, 1, 0)
+		TextLabel.Position = UDim2.new(0, 10, 0, 0)
+		TextLabel.Text = "📍 سيتم التحديث قريباً"
+		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- اللون الأبيض
+		TextLabel.TextStrokeTransparency = 0.5
+		TextLabel.TextSize = 20
+		TextLabel.TextWrapped = true
+		
+		wait(5) -- عرض الإشعار لمدة 5 ثوانٍ
+		Notification:Destroy() -- إزالة الإشعار بعد 5 ثوانٍ
+	end
+})
+
+-- إضافة خمسة أزرار في التبويب "بلوكس فروت"
+BlocksFruitsTab:AddButton({
+	Name = "بلوكس فروت 1 🥇",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+	end
+})
+
+BlocksFruitsTab:AddButton({
+	Name = "بلوكس فروت 2 🥈",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/1st-Mars/Annie/main/1st.lua'))()
+	end
+})
+
+BlocksFruitsTab:AddButton({
+	Name = "بلوكس فروت 3 🥉",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
+	end
+})
+
+BlocksFruitsTab:AddButton({
+	Name = "بلوكس فروت 4 🏅",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Script-Blox/Script/main/Ragnarok.Lua'))()
+	end
+})
+
+BlocksFruitsTab:AddButton({
+	Name = "بلوكس فروت 5 🎖️",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/NGUYENVUDUY1/V3PRO/main/HiruHub.lua"))()
+	end
+})
+
+OrionLib:Init()
